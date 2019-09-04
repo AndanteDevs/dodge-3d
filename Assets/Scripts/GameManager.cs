@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     {
         if ( Input.GetKey("r") )
         {
-            Restart();
+            RestartAll();
         }
     }
 
@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("Restarted " + SceneManager.GetActiveScene().name.ToString());
+    }
+    
+    void RestartAll ()
+    {
+        SceneManager.LoadScene(0);
+        Debug.Log("Restarted game");
     }
 
     public void CompleteLevel ()
